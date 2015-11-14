@@ -70,6 +70,10 @@ section, footer {
 	color: Black;
 }
 
+.btn-primary {
+	background-color: rgb(238, 238, 238);
+}
+
 /* .btn-default.down {
 	border: 2px solid rgb(23, 14, 15);
 } */
