@@ -1,0 +1,30 @@
+section {
+	text-align: center;
+}
+
+#masthead {
+	margin-top: 7em;
+}
+
+#content {
+	margin-top: 4em;
+}
+
+#content h2 {
+	margin-bottom: 1.5em;
+}
+
+.choices .btn {
+	margin: 1em;
+	width: 20em;
+}
+
+.game-start,
+/*.game-question,*/
+.game-choose-cat 
+{
+	display: none;
+}
+
+
+
