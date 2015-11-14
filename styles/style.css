@@ -4,7 +4,7 @@ body {
 	color: #F9E6CA;
 }
 
-section {
+section, footer {
 	text-align: center;
 }
 
@@ -54,10 +54,29 @@ section {
 	color: Black;
 }
 
-.game-start,
-.game-question,
+#content > .game-end h1,
+#content > .game-end h3 {
+	font-family: fantasy;
+}
+
+#content > .game-end h1 {
+	font-size: 5.5em;
+}
+
+#content > .game-end h3 {
+	font-size: 3em;
+}
+
+#mastfooter {
+	margin-top: 2em;
+	border-top: 1px solid;
+	width: 50em;
+}
+
+/*.game-start,*/
 .game-choose-cat,
-/*.game-answer,*/
+.game-question,
+.game-answer,
 .game-end 
 {
 	display: none;

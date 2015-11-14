@@ -21,7 +21,7 @@
 	<section id="content" class="container">
 		<div class="row game-start">
 			<div class="col-xs-12">
-				<a class="btn btn-default" href="#" role="button">Start!</a>
+				<a class="btn btn-default start-game" href="#" role="button">Start!</a>
 			</div>
 		</div>
 		<div class="row game-choose-cat">
@@ -65,16 +65,37 @@
 				<!-- At this point, we can probably hide the title -->
 				<h1>You got the correct answer!</h1>
 				<p>Blurb about this fine piece of media. </p>
+				<p>Select category for next question.</p>
+				<div class="group-1">
+						<button type="button" class="btn btn-default btn-1">Music</button>
+						<button type="button" class="btn btn-default btn-2">Movies</button>
+					</div>
+					<div class="group-2">
+						<button type="button" class="btn btn-default btn-3">Video Games</button>
+						<button type="button" class="btn btn-default btn-4">TV Shows</button>
+					</div>
+					<div class="group-3">
+						<button class="btn btn-default" type="submit">Submit</button>
+					</div>
 			</div>
 		</div>
 		<div class="row game-end">
 			<div class="col-xs-12">
-				<!-- At this point, we can probably hide the title -->
-				<h1></h1>
+				<!-- At this point, we can probably hide the title, and footer -->
+				<h1>Thank you for playing!</h1>
+				<h3>Final Score: <span class="num-correct">1</span> of <span class="num-asked">1</span></h3>
+				<a class="btn btn-default start-game" href="#" role="button">Start Again?</a>
+
 			</div>
 		</div>
 	</section>
-	
+	<footer id="mastfooter" class="container">
+		<div class="row">
+			<div class="col-xs-12">
+				<h3>Score: <span class="num-correct">1</span> of <span class="num-asked">1</span></h3>
+			</div>
+		</div>
+	</footer>
 
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
