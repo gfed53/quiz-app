@@ -1,20 +1,20 @@
 body {
-	background: url(../images/the-wire-hd-hbo.png) no-repeat center center;
+	/*Backgrounds toggled on game-answer*/
+	/*background: url(../images/the-wire-hd-hbo.png) no-repeat center center;*/
 	/*background: url(../images/mk.jpg) no-repeat center center;*/
 	/*background: url(../images/Oldboy-movie.jpg) no-repeat center center;*/
 	/*background: url(../images/dreamtheater.jpg) no-repeat center center;*/
 	background-size: cover;
-	/*background: linear-gradient(45deg, rgba(180,221,180,1) 0%,rgba(131,199,131,1) 17%,rgba(82,177,82,1) 33%,rgba(0,138,0,1) 67%,rgba(0,87,0,1) 83%,rgba(0,36,0,1) 100%);*/
+	background: linear-gradient(45deg, rgba(180,221,180,1) 0%,rgba(131,199,131,1) 17%,rgba(82,177,82,1) 33%,rgba(0,138,0,1) 67%,rgba(0,87,0,1) 83%,rgba(0,36,0,1) 100%);
 	font-family: 'Karla' serif;
 	color: #F9E6CA;
 }
 
-#content h1, 
+/*#content h1, 
 #content h2, 
 #content h3, 
 #content p {
-	/*background-color: Black;*/
-}
+}*/
 
 section, footer {
 	text-align: center;
@@ -27,7 +27,8 @@ section, footer {
 	font-family: 'Orbitron' serif;
 	width: 50em;
 	color: Black;
-	display: none;
+	/*Toggle on when on game-answer/game-end */
+	/*display: none;*/
 }
 
 #masthead h1 {
@@ -37,8 +38,6 @@ section, footer {
 #masthead h2 {
 
 }
-
-/**/
 
 #content {
 	margin-top: 4em;
@@ -84,18 +83,21 @@ section, footer {
 
 #content > .game-end h3 {
 	font-size: 3em;
+	margin-bottom: 1em;
 }
 
-#mastfooter {
+#mast-footer {
 	margin-top: 2em;
+	padding-top: 2em;
 	border-top: 1px solid;
 	width: 50em;
 }
 
-.game-start,
+/*Toggle for each state of the game*/
+/*.game-start,*/
 .game-choose-cat,
 .game-question,
-/*.game-answer,*/
+.game-answer,
 .game-end 
 {
 	display: none;
