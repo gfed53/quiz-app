@@ -6,16 +6,17 @@ $(document).ready(function(){
 	};
 
 	//Constructor function for questions
-	function Question(question, answer, wrong1, wrong2, wrong3){
+	function Question(question, answer, wrong1, wrong2, wrong3, blurb){
 		this.question = question;
 		this.answer = answer;
 		this.wrong1 = wrong1;
 		this.wrong2 = wrong2;
 		this.wrong3 = wrong3;
+		this.blurb = blurb
 	}
 
-	var sampQuestion = new Question('First Question?', 'correct', 'wrong', 'wrong again', 'wrong wrong wrong');
-	var sampQuestion2 = new Question('Second Question?', 'correct', 'wrong', 'wrong again', 'wrong wrong wrong');
+	var sampQuestion = new Question('First Question?', 'correct answer', 'wrong', 'wrong again', 'wrong wrong wrong', 'This is a blurb about answer 1');
+	var sampQuestion2 = new Question('Second Question?', 'correct answer 2', 'wrong', 'wrong again', 'wrong wrong wrong', 'This is a blurb about answer 2');
 
 	//Questions stored in array
 	var questionsList = [sampQuestion, sampQuestion2];
@@ -35,6 +36,35 @@ $(document).ready(function(){
 				};
 			}
 		});
+	};
+
+	//Detect whether selected choice is correct answer
+	var determineCorrect = function(){
+		console.log("Running determineCorrect");
+		var rightChoice = questionsList[records.currentQ];
+		console.log(rightChoice);
+		console.log(rightChoice.answer);
+		console.log($('.game-question.active span').html());
+		if($('.game-question .active span').html() === rightChoice.answer){
+			console.log("This should happen");
+			$('.answer-text h1').html(rightChoice.answer + " is correct!");
+			records.numCorrect += 1;
+			$('.num-correct').html(records.numCorrect);
+		} else {
+			$('.answer-text h1').html("Sorry, the answer is " + rightChoice.answer + ".");
+		}
+		$('.answer-text p').html(rightChoice.blurb);
+	};
+
+	var clearRoundData = function(){
+		//Clear active states
+		$('.btn-primary').removeClass('active');
+		//Or?
+		// $('.btn-primary').button('reset');
+		//Update score, question number, and question itself (make function?)
+		records.numAsked += 1;
+		$('.num-asked').html(records.numAsked);
+		records.currentQ += 1;
 	};
 
 	$('.game-start').show();
@@ -63,19 +93,12 @@ $(document).ready(function(){
 
 	//Feedback
 	$('.btn-select-answer').on('click', function(){
+		determineCorrect();
 		//Shift phase
 		$('.game-question').hide();
 		$('#masthead').hide();
 		$('.game-answer').show();
-		//Clear active buttons
-		$('.btn-primary').removeClass('active');
-		//Or?
-		// $('.btn-primary').button('reset');
-		//Update score, question number, and question itself (make function?)
-		records.numAsked += 1;
-		$('.num-asked').html(records.numAsked);
-		records.currentQ += 1;
-
+		clearRoundData();
 	});
 
 });
