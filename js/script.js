@@ -6,13 +6,14 @@ $(document).ready(function(){
 	};
 
 	//Constructor function for questions
-	function Question(question, answer, wrong1, wrong2, wrong3, blurb){
+	function Question(question, answer, wrong1, wrong2, wrong3, blurb, category){
 		this.question = question;
 		this.answer = answer;
 		this.wrong1 = wrong1;
 		this.wrong2 = wrong2;
 		this.wrong3 = wrong3;
-		this.blurb = blurb
+		this.blurb = blurb;
+		this.category = category;
 	}
 
 	var sampQuestion = new Question('First Question?', 'correct answer', 'wrong', 'wrong again', 'wrong wrong wrong', 'This is a blurb about answer 1');
@@ -67,6 +68,15 @@ $(document).ready(function(){
 		records.currentQ += 1;
 	};
 
+	//Check if all questions are asked. Goes in click function of select-answer?
+	var checkEnd = function(){
+		console.log(records.currentQ);
+		console.log(questionsList.length-1);
+		if(records.currentQ === (questionsList.length)){
+			console.log("This is the end");
+		}
+	};
+
 	$('.game-start').show();
 
 	//To go from start-game to choose-cat
@@ -99,6 +109,7 @@ $(document).ready(function(){
 		$('#masthead').hide();
 		$('.game-answer').show();
 		clearRoundData();
+		checkEnd();
 	});
 
 });
