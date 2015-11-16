@@ -1,25 +1,27 @@
 $(document).ready(function(){
-	var records = {
+	var quizApp = {
 		numCorrect: 0,
 		numAsked: 0,
-		currentQ: 0
+		currentQ: 0,
+		questionsList: []
 	};
 
 	//Constructor function for questions
-	function Question(question, answer, wrong1, wrong2, wrong3, blurb, category){
-		this.question = question;
-		this.answer = answer;
-		this.wrong1 = wrong1;
-		this.wrong2 = wrong2;
-		this.wrong3 = wrong3;
+	function Question(title, answers, correct, blurb, category){
+		this.title = title;
+		this.answers = answers;
+		this.correct = correct;
 		this.blurb = blurb;
 		this.category = category;
-	}
+		quizApp.questionsList.push(this);
+		console.log(quizApp.questionsList);
+	};
 
-	var sampQuestion = new Question('First Question?', 'correct answer', 'wrong', 'wrong again', 'wrong wrong wrong', 'This is a blurb about answer 1');
-	var sampQuestion2 = new Question('Second Question?', 'correct answer 2', 'wrong', 'wrong again', 'wrong wrong wrong', 'This is a blurb about answer 2');
+	var sampQuestion = new Question('First Question?', ['correct answer', 'wrong', 'wrong again', 'wrong wrong wrong'], 0, 'This is a blurb about answer 1');
+	var sampQuestion2 = new Question('Second Question?', ['correct answer 2', 'wrong', 'wrong again', 'wrong wrong wrong'], 0, 'This is a blurb about answer 2');
 
 	//Questions stored in array
+
 	var questionsList = [sampQuestion, sampQuestion2];
 
 	//Implant the questions 
