@@ -51,21 +51,22 @@
 				</div>
 			</div>
 		</div>
-		<div class="row game-question">
+		<!-- First Question -->
+		<div class="row game-question question-1">
 			<div class="col-xs-12">
 				<h2>This is a sample question. Pick any of the four answers below and hit Submit.</h2>
-				<div class ="btn-group" data-toggle="buttons">
-					<label id="label-1" class="btn btn-primary">
-						<input type="radio" name="options" id="option1" autocomplete="off" class="btn btn-default"><span>Option 1</span>
+				<div class ="btn-group" id="question-1" data-toggle="buttons">
+					<label id="question-1-label-1" class="btn btn-primary">
+						<input type="radio" name="options" id="question-1-option-1" autocomplete="off" class="btn btn-default"><span>Option 1</span>
 					</label>
-					<label id="label-2" class="btn btn-primary">
-						<input type="radio" name="options" id="option2" autocomplete="off" class="btn btn-default"><span>Option 2</span>
+					<label id="question-1-label-2" class="btn btn-primary">
+						<input type="radio" name="options" id="question-1-option-2" autocomplete="off" class="btn btn-default"><span>Option 2</span>
 					</label>
-					<label id="label-3" class="btn btn-primary">
-						<input type="radio" name="options" id="option3" autocomplete="off" class="btn btn-default"><span>Option 3</span>
+					<label id="question-1-label-3" class="btn btn-primary">
+						<input type="radio" name="options" id="question-1-option-3" autocomplete="off" class="btn btn-default"><span>Option 3</span>
 					</label>
-					<label id="label-4" class="btn btn-primary">
-						<input type="radio" name="options" id="option4" autocomplete="off" class="btn btn-default"><span>Option 4</span>
+					<label id="question-1-label-4" class="btn btn-primary">
+						<input type="radio" name="options" id="question-1-option-4" autocomplete="off" class="btn btn-default"><span>Option 4</span>
 					</label>
 				</div>
 				<div class="submit-area">
@@ -73,6 +74,109 @@
 				</div>
 			</div>
 		</div>
+		<!-- Answer to first question -->
+		<div class="row game-answer">
+			<div class="col-xs-12">
+				<!-- At this point, we can probably hide the title -->
+					<div class="answer-text">
+						<h1>Feedback</h1>
+						<p>Blurb about this fine piece of media. </p>
+						<h2>Select category for next question.</h2>
+					</div>
+				<div class ="btn-group" data-toggle="buttons">
+					<label class="btn btn-primary">
+						<input type="radio" name="options" id="option1" autocomplete="off" class="btn btn-default">Music
+					</label>
+					<label class="btn btn-primary">
+						<input type="radio" name="options" id="option2" autocomplete="off" class="btn btn-default">Movies
+					</label>
+					<label class="btn btn-primary">
+						<input type="radio" name="options" id="option3" autocomplete="off" class="btn btn-default">Video Games
+					</label>
+					<label class="btn btn-primary">
+						<input type="radio" name="options" id="option4" autocomplete="off" class="btn btn-default">TV Shows
+					</label>
+				</div>
+				<div class="submit-area">
+					<button class="btn btn-default btn-select-cat" type="submit">Submit</button>
+				</div>
+			</div>
+		</div>
+		<!--Second Question-->
+		<div class="row game-question question-1">
+			<div class="col-xs-12">
+				<h2>Next question. What will you choose?</h2>
+				<div class ="btn-group" id="question-2" data-toggle="buttons">
+					<label id="question-2-label-1" class="btn btn-primary">
+						<input type="radio" name="options" id="question-2-option-1" autocomplete="off" class="btn btn-default"><span>Option 1</span>
+					</label>
+					<label id="question-2-label-2" class="btn btn-primary">
+						<input type="radio" name="options" id="question-2-option-2" autocomplete="off" class="btn btn-default"><span>Option 2</span>
+					</label>
+					<label id="question-2-label-3" class="btn btn-primary">
+						<input type="radio" name="options" id="question-2-option-3" autocomplete="off" class="btn btn-default"><span>Option 3</span>
+					</label>
+					<label id="question-2-label-4" class="btn btn-primary">
+						<input type="radio" name="options" id="question-2-option-4" autocomplete="off" class="btn btn-default"><span>Option 4</span>
+					</label>
+				</div>
+				<div class="submit-area">
+					<button class="btn btn-default btn-select-answer" type="submit">Submit</button>
+				</div>
+			</div>
+		</div>
+		<!-- Answer to second question -->
+		<div class="row game-answer">
+			<div class="col-xs-12">
+				<!-- At this point, we can probably hide the title -->
+					<div class="answer-text">
+						<h1>Feedback</h1>
+						<p>This is something about the second answer. </p>
+						<h2>Select category for next question.</h2>
+					</div>
+				<div class ="btn-group" data-toggle="buttons">
+					<label class="btn btn-primary">
+						<input type="radio" name="options" id="option1" autocomplete="off" class="btn btn-default">Music
+					</label>
+					<label class="btn btn-primary">
+						<input type="radio" name="options" id="option2" autocomplete="off" class="btn btn-default">Movies
+					</label>
+					<label class="btn btn-primary">
+						<input type="radio" name="options" id="option3" autocomplete="off" class="btn btn-default">Video Games
+					</label>
+					<label class="btn btn-primary">
+						<input type="radio" name="options" id="option4" autocomplete="off" class="btn btn-default">TV Shows
+					</label>
+				</div>
+				<div class="submit-area">
+					<button class="btn btn-default btn-select-cat" type="submit">Submit</button>
+				</div>
+			</div>
+		</div>
+		<!--Third Question-->
+		<div class="row game-question question-1">
+			<div class="col-xs-12">
+				<h2>Now for this question. What will you pick?</h2>
+				<div class ="btn-group" id="question-3" data-toggle="buttons">
+					<label id="question-3-label-1" class="btn btn-primary">
+						<input type="radio" name="options" id="question-3-option-1" autocomplete="off" class="btn btn-default"><span>Option 1</span>
+					</label>
+					<label id="question-3-label-2" class="btn btn-primary">
+						<input type="radio" name="options" id="question-3-option-2" autocomplete="off" class="btn btn-default"><span>Option 2</span>
+					</label>
+					<label id="question-3-label-3" class="btn btn-primary">
+						<input type="radio" name="options" id="question-3-option-3" autocomplete="off" class="btn btn-default"><span>Option 3</span>
+					</label>
+					<label id="question-3-label-4" class="btn btn-primary">
+						<input type="radio" name="options" id="question-3-option-4" autocomplete="off" class="btn btn-default"><span>Option 4</span>
+					</label>
+				</div>
+				<div class="submit-area">
+					<button class="btn btn-default btn-select-answer" type="submit">Submit</button>
+				</div>
+			</div>
+		</div>
+		<!-- Answer to third question -->
 		<div class="row game-answer">
 			<div class="col-xs-12">
 				<!-- At this point, we can probably hide the title -->

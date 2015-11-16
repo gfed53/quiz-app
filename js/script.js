@@ -1,45 +1,42 @@
 $(document).ready(function(){
 	var quizApp = {
 		numCorrect: 0,
-		numAsked: 0,
-		currentQ: 0,
-		questionsList: []
+		numOfQuestions: 8,
+		// currentQ: 0,
+		//Questions stored in array
+		questions: []
 	};
 
 	//Constructor function for questions
-	function Question(title, answers, correct, blurb, category){
-		this.title = title;
-		this.answers = answers;
-		this.correct = correct;
-		this.blurb = blurb;
-		this.category = category;
-		quizApp.questionsList.push(this);
+	function makeQuestion(title, answers, correct){
+		var question = {
+			title = title;
+			answers = answers;
+			correct = correct
+			// this.category = category;
+		}
+		quizApp.questions.push(question);
 		console.log(quizApp.questionsList);
+		console.log($('.question-1')[0];
 	};
 
-	var sampQuestion = new Question('First Question?', ['correct answer', 'wrong', 'wrong again', 'wrong wrong wrong'], 0, 'This is a blurb about answer 1');
-	var sampQuestion2 = new Question('Second Question?', ['correct answer 2', 'wrong', 'wrong again', 'wrong wrong wrong'], 0, 'This is a blurb about answer 2');
+	makeQuestion('First Answer', ['correct answer', 'wrong', 'wrong again', 'wrong wrong wrong'], 0);
+	makeQuestion('Second Answer', ['wrong', 'wrong', 'correct answer 2', 'wrong wrong wrong'], 2);
 
-	//Questions stored in array
-
-	var questionsList = [sampQuestion, sampQuestion2];
+	
 
 	//Implant the questions 
-	var questionInject = function(){
-		questionsList.forEach(function(q){
-			console.log("Object");
-			if (q === questionsList[records.currentQ]){
-				for (var prop in q){
-					console.log("Prop");
-					$('.game-question h2').html(q.question);
-					$('#label-1 span').html(q.answer);
-					$('#label-2 span').html(q.wrong1);
-					$('#label-3 span').html(q.wrong2);
-					$('#label-4 span').html(q.wrong3);
-				};
-			}
-		});
-	};
+	// var questionInject = function(){
+	// 	quizApp.questions.forEach(function(q){
+
+	// 		console.log("Object");
+	// 		if ($('.btn-group:nth-child')('active') === question.correct){
+				
+					
+	// 			};
+	// 		}
+	// 	});
+	// };
 
 	//Detect whether selected choice is correct answer
 	var determineCorrect = function(){
