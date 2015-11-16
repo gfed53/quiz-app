@@ -52,7 +52,7 @@
 			</div>
 		</div>
 		<!-- First Question -->
-		<div class="row game-question question-1">
+		<div class="row game-question question-1-section">
 			<div class="col-xs-12">
 				<h2>This is a sample question. Pick any of the four answers below and hit Submit.</h2>
 				<div class ="btn-group" id="question-1" data-toggle="buttons">
@@ -75,15 +75,15 @@
 			</div>
 		</div>
 		<!-- Answer to first question -->
-		<div class="row game-answer">
+		<div class="row game-answer game-answer-1">
 			<div class="col-xs-12">
 				<!-- At this point, we can probably hide the title -->
 					<div class="answer-text">
 						<h1>Feedback</h1>
 						<p>Blurb about this fine piece of media. </p>
-						<h2>Select category for next question.</h2>
+						<h2>Next question</h2>
 					</div>
-				<div class ="btn-group" data-toggle="buttons">
+				<!-- <div class ="btn-group" data-toggle="buttons">
 					<label class="btn btn-primary">
 						<input type="radio" name="options" id="option1" autocomplete="off" class="btn btn-default">Music
 					</label>
@@ -96,14 +96,14 @@
 					<label class="btn btn-primary">
 						<input type="radio" name="options" id="option4" autocomplete="off" class="btn btn-default">TV Shows
 					</label>
-				</div>
+				</div> -->
 				<div class="submit-area">
-					<button class="btn btn-default btn-select-cat" type="submit">Submit</button>
+					<button class="btn btn-default" id="to-question-2" type="submit">Submit</button>
 				</div>
 			</div>
 		</div>
 		<!--Second Question-->
-		<div class="row game-question question-1">
+		<div class="row game-question question-2-section">
 			<div class="col-xs-12">
 				<h2>Next question. What will you choose?</h2>
 				<div class ="btn-group" id="question-2" data-toggle="buttons">
@@ -126,15 +126,15 @@
 			</div>
 		</div>
 		<!-- Answer to second question -->
-		<div class="row game-answer">
+		<div class="row game-answer game-answer-2">
 			<div class="col-xs-12">
 				<!-- At this point, we can probably hide the title -->
 					<div class="answer-text">
 						<h1>Feedback</h1>
 						<p>This is something about the second answer. </p>
-						<h2>Select category for next question.</h2>
+						<h2>Next question</h2>
 					</div>
-				<div class ="btn-group" data-toggle="buttons">
+				<!-- <div class ="btn-group" data-toggle="buttons">
 					<label class="btn btn-primary">
 						<input type="radio" name="options" id="option1" autocomplete="off" class="btn btn-default">Music
 					</label>
@@ -147,14 +147,14 @@
 					<label class="btn btn-primary">
 						<input type="radio" name="options" id="option4" autocomplete="off" class="btn btn-default">TV Shows
 					</label>
-				</div>
+				</div> -->
 				<div class="submit-area">
-					<button class="btn btn-default btn-select-cat" type="submit">Submit</button>
+					<button class="btn btn-default" id="to-question-3" type="submit">Submit</button>
 				</div>
 			</div>
 		</div>
 		<!--Third Question-->
-		<div class="row game-question question-1">
+		<div class="row game-question question-3-section">
 			<div class="col-xs-12">
 				<h2>Now for this question. What will you pick?</h2>
 				<div class ="btn-group" id="question-3" data-toggle="buttons">
@@ -177,13 +177,13 @@
 			</div>
 		</div>
 		<!-- Answer to third question -->
-		<div class="row game-answer">
+		<div class="row game-answer game-answer-3">
 			<div class="col-xs-12">
 				<!-- At this point, we can probably hide the title -->
 					<div class="answer-text">
 						<h1>Feedback</h1>
 						<p>Blurb about this fine piece of media. </p>
-						<h2>Select category for next question.</h2>
+						<h2>Next question.</h2>
 					</div>
 				<div class ="btn-group" data-toggle="buttons">
 					<label class="btn btn-primary">
@@ -200,7 +200,7 @@
 					</label>
 				</div>
 				<div class="submit-area">
-					<button class="btn btn-default btn-select-cat" type="submit">Submit</button>
+					<button class="btn btn-default" type="submit">Submit</button>
 				</div>
 			</div>
 		</div>
@@ -208,7 +208,7 @@
 			<div class="col-xs-12">
 				<!-- At this point, we can probably hide the title, and footer -->
 				<h1>Thank you for playing!</h1>
-				<h3>Your Final Score: <span class="num-correct">1</span> of <span class="num-asked">1</span></h3>
+				<h3>Your Final Score: <span class="num-correct">1</span> of <span class="num-total">8</span></h3>
 				<a class="btn btn-default start-game" href="#" role="button">Start Again?</a>
 
 			</div>
