@@ -8,11 +8,12 @@ $(document).ready(function(){
 	};
 
 	//Constructor function for questions
-	function makeQuestion(title, answers, correct){
+	function makeQuestion(title, answers, correct, blurb){
 		var question = {
 			title: title,
 			answers: answers,
-			correct: correct
+			correct: correct,
+			blurb: blurb
 			// this.category = category;
 		}
 
@@ -21,14 +22,15 @@ $(document).ready(function(){
 		// console.log($('#question-1')[0]);
 	};
 
-	makeQuestion('First Answer', ['correct answer', 'wrong', 'wrong again', 'wrong wrong wrong'], 0);
-	makeQuestion('Second Answer', ['wrong', 'wrong', 'correct answer 2', 'wrong wrong wrong'], 2);
+	makeQuestion('First Answer', ['correct answer', 'wrong', 'wrong again', 'wrong wrong wrong'], 0, "This is a blurb about answer 1");
+	makeQuestion('Second Answer', ['wrong', 'wrong', 'correct answer 2', 'wrong wrong wrong'], 2, "This is a blurb about answer 2");
 	
 	
 
 	//Implant the questions 
 	var questionInject = function(){
 		console.log($('.game-question label')[0]);
+		console.log($('#content .game-question')[2]);
 		// quizApp.questions.forEach(function(q){
 		// 	console.log("Object");
 
@@ -47,15 +49,20 @@ $(document).ready(function(){
 
 	//Detect whether selected choice is correct answer
 	var determineCorrect = function(){
-		var n = quizApp.questions[quizApp.currentQ].correct;
-		console.log(n);
+		var current = quizApp.questions[quizApp.currentQ];
+		console.log(current);
+		var c = current.correct;
+		console.log(c);
 
-
-		if ($('.game-question label')[n].hasClass('active')){
+		if ($('.active span').html() === current.answers[c]){
 			console.log("You are correct");
+			$('.answer-text h1').html("Correct!");
+			quizApp.numCorrect += 1;
+			$('.num-correct').html(quizApp.numCorrect);
 		} else {
-			console.log("You are wrong");
-		}
+			console.log("Wrong.");
+			$('.answer-text h1').html("Wrong");
+		};
 
 		// console.log("Running determineCorrect");
 		// var rightChoice = questionsList[records.currentQ];
@@ -95,30 +102,19 @@ $(document).ready(function(){
 
 	$('.game-start').show();
 
+	//Toggle buttons go to active when clicked
+	$('.btn-primary').on('click', function(){
+		$(this).button('toggle');
+	});
+
 	//To go from start-game to question 1
 	$('.btn-start-game').on('click', function(){
 		$('.game-start').hide();
 		$('.question-1-section').show();
 	});
 
-	//Toggle buttons go to active when clicked
-	$('.btn-primary').on('click', function(){
-		$(this).button('toggle');
-	});
-
-	//To go from choose-cat to game-question
-	$('.btn-select-cat').on('click', function(){
-		//Shift phase
-		$('.game-choose-cat').hide();
-		$('.game-answer').hide();
-		$('.game-question').show();
-		$('#masthead').show();
-		questionInject();
-		
-	});
-
 	//Feedback(for question 1)
-	$('.btn-select-answer').on('click', function(){
+	$('.btn-select-answer-1').on('click', function(){
 		determineCorrect();
 		//Shift phase
 		$('.game-question').hide();
@@ -127,6 +123,39 @@ $(document).ready(function(){
 		clearRoundData();
 		// checkEnd();
 	});
+
+	//To question 2
+	$('#to-question-2').on('click', function(){
+		$('.game-answer-1').hide();
+		$('.question-2-section').show();
+		$('#masthead').show();
+	});
+
+	//Feedback(for question 2)
+	$('.btn-select-answer-2').on('click', function(){
+		determineCorrect();
+		//Shift phase
+		$('.game-question').hide();
+		$('#masthead').hide();
+		$('.game-answer-2').show();
+		clearRoundData();
+		// checkEnd();
+	});
+
+	
+
+	//To go from choose-cat to game-question
+	// $('.btn-select-cat').on('click', function(){
+	// 	//Shift phase
+	// 	$('.game-choose-cat').hide();
+	// 	$('.game-answer').hide();
+	// 	$('.game-question').show();
+	// 	$('#masthead').show();
+	// 	questionInject();
+		
+	// });
+
+	
 
 });
 
