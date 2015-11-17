@@ -24,7 +24,7 @@ $(document).ready(function(){
 
 	makeQuestion('First Answer', ['correct answer', 'wrong', 'wrong again', 'wrong wrong wrong'], 0, "This is a blurb about answer 1");
 	makeQuestion('Second Answer', ['wrong', 'wrong', 'correct answer 2', 'wrong wrong wrong'], 2, "This is a blurb about answer 2");
-	
+	makeQuestion('Third Answer', ['wrong', 'correct', 'wrong', 'wrong'], 1, 'Blurb about the third');
 	
 
 	//Implant the questions 
@@ -37,7 +37,7 @@ $(document).ready(function(){
 			// if (q[0]) {
 			// 	$('.question-1').show();
 			// } else if (q[1])
-			// if ($(#)('active') === question.correct){
+			// if ($('active') === question.correct){
 				
 					
 			// 	};
@@ -53,7 +53,9 @@ $(document).ready(function(){
 		console.log(current);
 		var c = current.correct;
 		console.log(c);
-
+		// if ($('.game-question label')[c].hasClass('active')){
+		// 	console.log("Right");
+		// }
 		if ($('.active span').html() === current.answers[c]){
 			console.log("You are correct");
 			$('.answer-text h1').html("Correct!");
@@ -63,6 +65,7 @@ $(document).ready(function(){
 			console.log("Wrong.");
 			$('.answer-text h1').html("Wrong");
 		};
+		$('.answer-text p').html(current.blurb);
 
 		// console.log("Running determineCorrect");
 		// var rightChoice = questionsList[records.currentQ];
@@ -108,13 +111,13 @@ $(document).ready(function(){
 	});
 
 	//To go from start-game to question 1
-	$('.btn-start-game').on('click', function(){
+	$('#to-start-game').on('click', function(){
 		$('.game-start').hide();
 		$('.question-1-section').show();
 	});
 
 	//Feedback(for question 1)
-	$('.btn-select-answer-1').on('click', function(){
+	$('#select-answer-1').on('click', function(){
 		determineCorrect();
 		//Shift phase
 		$('.game-question').hide();
@@ -132,7 +135,7 @@ $(document).ready(function(){
 	});
 
 	//Feedback(for question 2)
-	$('.btn-select-answer-2').on('click', function(){
+	$('#select-answer-2').on('click', function(){
 		determineCorrect();
 		//Shift phase
 		$('.game-question').hide();
@@ -142,7 +145,49 @@ $(document).ready(function(){
 		// checkEnd();
 	});
 
-	
+	//Question 
+	$('#to-question-3').on('click', function(){
+		$('.game-answer-2').hide();
+		$('.question-3-section').show();
+		$('#masthead').show();
+	});
+
+	//Feedback(for question 3)
+	$('#select-answer-3').on('click', function(){
+		determineCorrect();
+		//Shift phase
+		$('.game-question').hide();
+		$('#masthead').hide();
+		$('.game-answer-3').show();
+		clearRoundData();
+		// checkEnd();
+	});
+
+	// $('#content .game-question').forEach(function(q))
+
+	// quizApp.questions.forEach(function(q)
+
+
+	//How we might make a loop
+
+		// var q = quizApp.currentQ;
+		// $('btn-question')[q].on('click', function(){
+		// 	$('.game-answer')[q].hide();
+		// 	$('.game-question')[q+1].show();
+		// 	$('#masthead').show();
+		// });
+
+		// //Feedback
+		// $('.btn-answer')[q].on('click', function(){
+		// 	determineCorrect();
+		// 	//Shift phase
+		// 	$('.game-question').hide();
+		// 	$('#masthead').hide();
+		// 	$('.game-answer')[q+1].show();
+		// 	clearRoundData();
+		// 	// checkEnd();
+		// });
+		
 
 	//To go from choose-cat to game-question
 	// $('.btn-select-cat').on('click', function(){
@@ -167,4 +212,12 @@ $(document).ready(function(){
 	// 	} else{
 	// 		$(this).toggleClass('active');
 	// 	}
+// var current = quizApp.questions[quizApp.currentQ];
+// console.log(current);
+// var c = current.correct;
+// if ($('.game-question label')[c].hasClass('active')){
+// 	console.log("Right");
+// }
+
+
 	// });
