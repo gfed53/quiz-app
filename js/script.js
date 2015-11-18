@@ -22,10 +22,14 @@ $(document).ready(function(){
 		// console.log($('#question-1')[0]);
 	};
 
-	makeQuestion('First Answer', ['correct answer', 'wrong', 'wrong again', 'wrong wrong wrong'], 0, "This is a blurb about answer 1");
-	makeQuestion('Second Answer', ['wrong', 'wrong', 'correct answer 2', 'wrong wrong wrong'], 2, "This is a blurb about answer 2");
-	makeQuestion('Third Answer', ['wrong', 'correct', 'wrong', 'wrong'], 1, 'Blurb about the third');
-	
+	/*1*/makeQuestion("Mortal Kombat X", ["Injustice: Gods Among Us", "Resident Evil 5", "Mortal Kombat X", "Dead Space II"], 2, "Mortal Kombat X introduced Jax Briggs daughter as well as Johnny Cage and Sonya Blade’s daughter, but also some non-canonical crossover characters such as the Predator and Jason Voorhees. Toas-ty!")
+	/*2*/makeQuestion("The Wire", ["The Wire", "True Detective", "Homicide", "Law & Order"], 0, "The Wire was a critically acclaimed HBO TV show that focused on the Baltimore drug scene which plagued the city, obviously considered to be a big issue at the time.");
+	/*3*/makeQuestion("Oldboy", ["The Raid 2", "Lady Vengence", "Fight Club", "Oldboy"], 3, "‘Laugh, and the whole world laughs around you. Weep, and you weep alone.’ Part of ‘The Vengence Trilogy’ by Korean director Chan Woo Park, Oldboy is able to stand on its own as a remarkable revenge story that makes the view question who the real villain is, if they even exist at all. (For those of you who picked The Raid 2, sorry. I did say 'mystery', though! *trollface*)");
+	/*4*/makeQuestion("Dream Theater", ["Megadeth", "Dream Theater", "Slayer", "Yes"], 1, "Dream Theater, the artist formerly known as Majesty, began their career in the 1980’s and have truly stood the test of time, despite not being a band that you’ll likely hear on the radio anytime soon. (10-20 minute songs aren’t exactly radio-friendly.)");
+	/*5*/makeQuestion("Chrono Trigger", ["The Legend of Zelda: Majora's Mask", "EarthBound", "Chrono Trigger", "Final Fantasy VI"], 2, "Chrono Trigger. Do I need to say more? If RPG’s are your cup of tea, and you haven’t played this game yet, get on it! Unlike the characters within the game, we don’t have all the time in the world!!");
+	/*6*/makeQuestion("The Sopranos", ["Breaking Bad", "Dexter", "The Sopranos", "In Treatment"], 2, "The Sopranos was one of HBO’s most, if not THE most, well-known shows of all time. To say that it was influential might not really apply here because not many shows have even dared to fill it’s shoes. That’s not to say that this will forever be the case, though.");
+	/*7*/makeQuestion("Mulholland Drive", ["Mulholland Drive", "Vanilla Sky", "Snatch", "The Green Mile"], 0, "Mullholland Drive. Going into any sort of detail could spoil the viewing experience for those who haven’t seen it, but it can be considered the pinnacle of director David Lynch’s eccentric and bizarre cinematic career.");
+	/*8*/makeQuestion("Alice in Chains", ["Soundgarden", "Alice in Chains", "Nirvana", "Pearl Jam"], 1, "Alice in Chains was founded by lead singer Layne Staley and guitarist/vocalist Jerry Cantrell in 1987. Staley unfortunately suffered from drug addiction, so bad that his decaying body was found after he had isolated himself from pretty much everyone he knew.");
 
 	//Implant the questions 
 	var questionInject = function(){
@@ -53,6 +57,7 @@ $(document).ready(function(){
 		console.log(current);
 		var c = current.correct;
 		console.log(c);
+		console.log($('.game-question label')[c]);
 		// if ($('.game-question label')[c].hasClass('active')){
 		// 	console.log("Right");
 		// }
@@ -97,8 +102,7 @@ $(document).ready(function(){
 	//Check if all questions are asked. Goes in click function of select-answer?
 	var checkEnd = function(){
 		console.log(quizApp.currentQ);
-		console.log(questionsList.length-1);
-		if(records.currentQ === (questionsList.length)){
+		if(quizApp.currentQ === quizApp.questions.length){
 			console.log("This is the end");
 		}
 	};
@@ -145,8 +149,9 @@ $(document).ready(function(){
 		// checkEnd();
 	});
 
-	//Question 
+	//to question 3 
 	$('#to-question-3').on('click', function(){
+		// checkEnd();
 		$('.game-answer-2').hide();
 		$('.question-3-section').show();
 		$('#masthead').show();
@@ -160,8 +165,102 @@ $(document).ready(function(){
 		$('#masthead').hide();
 		$('.game-answer-3').show();
 		clearRoundData();
-		// checkEnd();
 	});
+
+	//to question 4 
+	$('#to-question-4').on('click', function(){
+		// checkEnd();
+		$('.game-answer-3').hide();
+		$('.question-4-section').show();
+		$('#masthead').show();
+	});
+
+	//Feedback(for question 4)
+	$('#select-answer-4').on('click', function(){
+		determineCorrect();
+		//Shift phase
+		$('.game-question').hide();
+		$('#masthead').hide();
+		$('.game-answer-4').show();
+		clearRoundData();
+	});
+
+	//to question 5
+	$('#to-question-5').on('click', function(){
+		// checkEnd();
+		$('.game-answer').hide();
+		$('.question-5-section').show();
+		$('#masthead').show();
+	});
+
+	//Feedback(for question 5)
+	$('#select-answer-5').on('click', function(){
+		determineCorrect();
+		//Shift phase
+		$('.game-question').hide();
+		$('#masthead').hide();
+		$('.game-answer-5').show();
+		clearRoundData();
+	});
+
+	//to question 6 
+	$('#to-question-6').on('click', function(){
+		// checkEnd();
+		$('.game-answer').hide();
+		$('.question-6-section').show();
+		$('#masthead').show();
+	});
+
+	//Feedback(for question 6)
+	$('#select-answer-6').on('click', function(){
+		determineCorrect();
+		//Shift phase
+		$('.game-question').hide();
+		$('#masthead').hide();
+		$('.game-answer-6').show();
+		clearRoundData();
+	});
+
+	//to question 7 
+	$('#to-question-7').on('click', function(){
+		// checkEnd();
+		$('.game-answer').hide();
+		$('.question-7-section').show();
+		$('#masthead').show();
+	});
+
+	//Feedback(for question 7)
+	$('#select-answer-7').on('click', function(){
+		determineCorrect();
+		//Shift phase
+		$('.game-question').hide();
+		$('#masthead').hide();
+		$('.game-answer-7').show();
+		clearRoundData();
+	});
+
+	//to question 8 
+	$('#to-question-8').on('click', function(){
+		// checkEnd();
+		$('.game-answer').hide();
+		$('.question-8-section').show();
+		$('#masthead').show();
+	});
+
+	//Feedback(for question 8)
+	$('#select-answer-8').on('click', function(){
+		determineCorrect();
+		//Shift phase
+		$('.game-question').hide();
+		$('#masthead').hide();
+		$('.game-answer-8').show();
+		clearRoundData();
+	});
+
+	$('#to-game-end').on('click', function(){
+		$('.game-answer').hide();
+		$('.game-end').show();
+	})
 
 	// $('#content .game-question').forEach(function(q))
 
@@ -171,7 +270,7 @@ $(document).ready(function(){
 	//How we might make a loop
 
 		// var q = quizApp.currentQ;
-		// $('btn-question')[q].on('click', function(){
+		// $('.btn-question')[q].on('click', function(){
 		// 	$('.game-answer')[q].hide();
 		// 	$('.game-question')[q+1].show();
 		// 	$('#masthead').show();
@@ -215,7 +314,7 @@ $(document).ready(function(){
 // var current = quizApp.questions[quizApp.currentQ];
 // console.log(current);
 // var c = current.correct;
-// if ($('.game-question label')[c].hasClass('active')){
+// if ($('.active')){
 // 	console.log("Right");
 // }
 
