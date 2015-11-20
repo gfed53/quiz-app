@@ -69,6 +69,7 @@ $(document).ready(function(){
 	$('.start-game').on('click', function(){
 		$('.game-start').hide();
 		$('.question-1-section').show();
+		$('body').css("height", "100%");
 		// $('body').css("height", "66em");
 	});
 
@@ -242,7 +243,7 @@ $(document).ready(function(){
 	//Ending page
 	$('#to-game-end').on('click', function(){
 		$('.game-answer').hide();
-		$('body').css("background", "linear-gradient(45deg, rgba(180,221,180,1) 0%,rgba(131,199,131,1) 17%,rgba(82,177,82,1) 33%,rgba(0,138,0,1) 67%,rgba(0,87,0,1) 83%,rgba(0,36,0,1) 100%)");
+		$('body').css({"background": "linear-gradient(45deg, rgba(180,221,180,1) 0%,rgba(131,199,131,1) 17%,rgba(82,177,82,1) 33%,rgba(0,138,0,1) 67%,rgba(0,87,0,1) 83%,rgba(0,36,0,1) 100%)", "height": "100vh"});
 		$('footer').css("background-color", "transparent");
 		$('#score-footer').hide();
 		$('.game-end').show();
