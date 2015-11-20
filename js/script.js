@@ -69,7 +69,7 @@ $(document).ready(function(){
 	$('.start-game').on('click', function(){
 		$('.game-start').hide();
 		$('.question-1-section').show();
-		$('body').css("height", "66em");
+		// $('body').css("height", "66em");
 	});
 
 	//Feedback(for question 1)
@@ -79,7 +79,7 @@ $(document).ready(function(){
 		$('.game-question').hide();
 		$('#masthead').hide();
 		$('.game-answer-1').show();
-		$('body').css("height", "53em");
+		// $('body').css("height", "53em");
 		$('footer').css("background-color", "rgba(51, 51, 51, 0.68)")
 		clearRoundData();
 	});
@@ -89,7 +89,7 @@ $(document).ready(function(){
 		$('.game-answer-1').hide();
 		$('body').css("background", "linear-gradient(45deg, rgba(180,221,180,1) 0%,rgba(131,199,131,1) 17%,rgba(82,177,82,1) 33%,rgba(0,138,0,1) 67%,rgba(0,87,0,1) 83%,rgba(0,36,0,1) 100%)");
 		$('.question-2-section').show();
-		$('body').css("height", "66em");
+		// $('body').css("height", "66em");
 		$('footer').css("background-color", "transparent");
 		$('#masthead').show();
 	});
@@ -101,7 +101,7 @@ $(document).ready(function(){
 		$('.game-question').hide();
 		$('#masthead').hide();
 		$('.game-answer-2').show();
-		$('body').css("height", "53em");
+		// $('body').css("height", "53em");
 		$('footer').css("background-color", "rgba(51, 51, 51, 0.68)")
 		clearRoundData();
 	});
@@ -111,7 +111,7 @@ $(document).ready(function(){
 		$('.game-answer-2').hide();
 		$('body').css("background", "linear-gradient(45deg, rgba(180,221,180,1) 0%,rgba(131,199,131,1) 17%,rgba(82,177,82,1) 33%,rgba(0,138,0,1) 67%,rgba(0,87,0,1) 83%,rgba(0,36,0,1) 100%)");
 		$('.question-3-section').show();
-		$('body').css("height", "66em");
+		// $('body').css("height", "66em");
 		$('footer').css("background-color", "transparent");
 		$('#masthead').show();
 	});
@@ -123,7 +123,7 @@ $(document).ready(function(){
 		$('.game-question').hide();
 		$('#masthead').hide();
 		$('.game-answer-3').show();
-		$('body').css("height", "53em");
+		// $('body').css("height", "53em");
 		$('footer').css("background-color", "rgba(51, 51, 51, 0.68)")
 		clearRoundData();
 	});
@@ -132,9 +132,8 @@ $(document).ready(function(){
 	$('#to-question-4').on('click', function(){
 		$('.game-answer-3').hide();
 		$('body').css("background", "linear-gradient(45deg, rgba(180,221,180,1) 0%,rgba(131,199,131,1) 17%,rgba(82,177,82,1) 33%,rgba(0,138,0,1) 67%,rgba(0,87,0,1) 83%,rgba(0,36,0,1) 100%)");
-		$('body').css("background", "linear-gradient(45deg, rgba(180,221,180,1) 0%,rgba(131,199,131,1) 17%,rgba(82,177,82,1) 33%,rgba(0,138,0,1) 67%,rgba(0,87,0,1) 83%,rgba(0,36,0,1) 100%)");
 		$('.question-4-section').show();
-		$('body').css("height", "66em");
+		// $('body').css("height", "66em");
 		$('footer').css("background-color", "transparent");
 		$('#masthead').show();
 	});
@@ -146,7 +145,7 @@ $(document).ready(function(){
 		$('.game-question').hide();
 		$('#masthead').hide();
 		$('.game-answer-4').show();
-		$('body').css("height", "53em");
+		// $('body').css("height", "53em");
 		$('footer').css("background-color", "rgba(51, 51, 51, 0.68)")
 		clearRoundData();
 	});
@@ -157,7 +156,7 @@ $(document).ready(function(){
 		$('body').css("background", "linear-gradient(45deg, rgba(180,221,180,1) 0%,rgba(131,199,131,1) 17%,rgba(82,177,82,1) 33%,rgba(0,138,0,1) 67%,rgba(0,87,0,1) 83%,rgba(0,36,0,1) 100%)");
 		$('body').css("background", "linear-gradient(45deg, rgba(180,221,180,1) 0%,rgba(131,199,131,1) 17%,rgba(82,177,82,1) 33%,rgba(0,138,0,1) 67%,rgba(0,87,0,1) 83%,rgba(0,36,0,1) 100%)");
 		$('.question-5-section').show();
-		$('body').css("height", "66em");
+		// $('body').css("height", "66em");
 		$('footer').css("background-color", "transparent");
 		$('#masthead').show();
 	});
@@ -169,7 +168,7 @@ $(document).ready(function(){
 		$('.game-question').hide();
 		$('#masthead').hide();
 		$('.game-answer-5').show();
-		$('body').css("height", "53em");
+		// $('body').css("height", "53em");
 		$('footer').css("background-color", "rgba(51, 51, 51, 0.68)")
 		clearRoundData();
 	});
@@ -179,7 +178,7 @@ $(document).ready(function(){
 		$('.game-answer').hide();
 		$('body').css("background", "linear-gradient(45deg, rgba(180,221,180,1) 0%,rgba(131,199,131,1) 17%,rgba(82,177,82,1) 33%,rgba(0,138,0,1) 67%,rgba(0,87,0,1) 83%,rgba(0,36,0,1) 100%)");
 		$('.question-6-section').show();
-		$('body').css("height", "66em");
+		// $('body').css("height", "66em");
 		$('footer').css("background-color", "transparent");
 		$('#masthead').show();
 	});
@@ -191,7 +190,7 @@ $(document).ready(function(){
 		$('.game-question').hide();
 		$('#masthead').hide();
 		$('.game-answer-6').show();
-		$('body').css("height", "53em");
+		// $('body').css("height", "53em");
 		$('footer').css("background-color", "rgba(51, 51, 51, 0.68)")
 		clearRoundData();
 	});
@@ -201,7 +200,7 @@ $(document).ready(function(){
 		$('.game-answer').hide();
 		$('body').css("background", "linear-gradient(45deg, rgba(180,221,180,1) 0%,rgba(131,199,131,1) 17%,rgba(82,177,82,1) 33%,rgba(0,138,0,1) 67%,rgba(0,87,0,1) 83%,rgba(0,36,0,1) 100%)");
 		$('.question-7-section').show();
-		$('body').css("height", "66em");
+		// $('body').css("height", "66em");
 		$('footer').css("background-color", "transparent");
 		$('#masthead').show();
 	});
@@ -213,7 +212,7 @@ $(document).ready(function(){
 		$('.game-question').hide();
 		$('#masthead').hide();
 		$('.game-answer-7').show();
-		$('body').css("height", "53em");
+		// $('body').css("height", "53em");
 		$('footer').css("background-color", "rgba(51, 51, 51, 0.68)")
 		clearRoundData();
 	});
@@ -223,7 +222,7 @@ $(document).ready(function(){
 		$('.game-answer').hide();
 		$('body').css("background", "linear-gradient(45deg, rgba(180,221,180,1) 0%,rgba(131,199,131,1) 17%,rgba(82,177,82,1) 33%,rgba(0,138,0,1) 67%,rgba(0,87,0,1) 83%,rgba(0,36,0,1) 100%)");
 		$('.question-8-section').show();
-		$('body').css("height", "66em");
+		// $('body').css("height", "66em");
 		$('footer').css("background-color", "transparent");
 		$('#masthead').show();
 	});
@@ -235,7 +234,7 @@ $(document).ready(function(){
 		$('.game-question').hide();
 		$('#masthead').hide();
 		$('.game-answer-8').show();
-		$('body').css("height", "53em");
+		// $('body').css("height", "53em");
 		$('footer').css("background-color", "rgba(51, 51, 51, 0.68)")
 		clearRoundData();
 	});
