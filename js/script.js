@@ -81,7 +81,7 @@ $(document).ready(function(){
 		$('#masthead').hide();
 		$('.game-answer-1').show();
 		// $('body').css("height", "53em");
-		$('footer').css("background-color", "rgba(51, 51, 51, 0.68)")
+		$('footer').css("background-color", "rgba(51, 51, 51, 0.68)");
 		clearRoundData();
 	});
 
@@ -103,7 +103,7 @@ $(document).ready(function(){
 		$('#masthead').hide();
 		$('.game-answer-2').show();
 		// $('body').css("height", "53em");
-		$('footer').css("background-color", "rgba(51, 51, 51, 0.68)")
+		$('footer').css("background-color", "rgba(51, 51, 51, 0.68)");
 		clearRoundData();
 	});
 
@@ -125,7 +125,7 @@ $(document).ready(function(){
 		$('#masthead').hide();
 		$('.game-answer-3').show();
 		// $('body').css("height", "53em");
-		$('footer').css("background-color", "rgba(51, 51, 51, 0.68)")
+		$('footer').css("background-color", "rgba(51, 51, 51, 0.68)");
 		clearRoundData();
 	});
 
@@ -147,7 +147,7 @@ $(document).ready(function(){
 		$('#masthead').hide();
 		$('.game-answer-4').show();
 		// $('body').css("height", "53em");
-		$('footer').css("background-color", "rgba(51, 51, 51, 0.68)")
+		$('footer').css("background-color", "rgba(51, 51, 51, 0.68)");
 		clearRoundData();
 	});
 
@@ -170,7 +170,7 @@ $(document).ready(function(){
 		$('#masthead').hide();
 		$('.game-answer-5').show();
 		// $('body').css("height", "53em");
-		$('footer').css("background-color", "rgba(51, 51, 51, 0.68)")
+		$('footer').css("background-color", "rgba(51, 51, 51, 0.68)");
 		clearRoundData();
 	});
 
@@ -192,7 +192,7 @@ $(document).ready(function(){
 		$('#masthead').hide();
 		$('.game-answer-6').show();
 		// $('body').css("height", "53em");
-		$('footer').css("background-color", "rgba(51, 51, 51, 0.68)")
+		$('footer').css("background-color", "rgba(51, 51, 51, 0.68)");
 		clearRoundData();
 	});
 
@@ -214,7 +214,7 @@ $(document).ready(function(){
 		$('#masthead').hide();
 		$('.game-answer-7').show();
 		// $('body').css("height", "53em");
-		$('footer').css("background-color", "rgba(51, 51, 51, 0.68)")
+		$('footer').css("background-color", "rgba(51, 51, 51, 0.68)");
 		clearRoundData();
 	});
 
@@ -236,7 +236,7 @@ $(document).ready(function(){
 		$('#masthead').hide();
 		$('.game-answer-8').show();
 		// $('body').css("height", "53em");
-		$('footer').css("background-color", "rgba(51, 51, 51, 0.68)")
+		$('footer').css("background-color", "rgba(51, 51, 51, 0.68)");
 		clearRoundData();
 	});
 
