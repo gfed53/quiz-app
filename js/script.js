@@ -18,7 +18,6 @@ $(document).ready(function(){
 		}
 
 		quizApp.questions.push(question);
-		console.log(quizApp.questions);
 	};
 
 	/*1*/makeQuestion('Mortal Kombat X', ['Injustice: Gods Among Us', 'Resident Evil 5', 'Mortal Kombat X', 'Dead Space II'], 2, 'Mortal Kombat X introduced Jax Briggs daughter as well as Johnny Cage and Sonya Blade’s daughter, but also some non-canonical crossover characters such as the Predator and Jason Voorhees. Toas-ty!', 'images/mk.jpg')
@@ -33,17 +32,12 @@ $(document).ready(function(){
 	//Detect whether selected choice is correct answer
 	var determineCorrect = function(){
 		var current = quizApp.questions[quizApp.currentQ];
-		console.log(current);
 		var correctAns = current.correct;
-		console.log(correctAns);
-		console.log($('.game-question label')[correctAns]);
 		if ($('.active span').html() === current.answers[correctAns]){
-			console.log('You are correct');
 			$('.answer-text h1').html('Correct!');
 			quizApp.numCorrect += 1;
 			$('.num-correct').html(quizApp.numCorrect);
 		} else {
-			console.log('Wrong.');
 			$('.answer-text h1').html('Wrong');
 		};
 		$('.answer-text p').html(current.blurb);
@@ -68,16 +62,18 @@ $(document).ready(function(){
 	//Refactor #7
 	$('.btn-answer').on('click', function(){
 		determineCorrect();
+		// $('body').removeClass('body-nobg');
 		$('.game-question').hide();
 		$('#masthead').hide();
-		$('footer').css('background-color', 'rgba(51, 51, 51, 0.68)');
+		$('footer').addClass('footer-withbg');
 		clearRoundData();		
 	});
 
 	$('.btn-question').on('click', function(){
 		$('.game-answer').hide();
+		// $('body').addClass('body-nobg');
 		$('body').css({'background-color': '#22313F', 'background-image': 'none' });
-		$('footer').css('background-color', 'transparent');
+		$('footer').removeClass('footer-withbg');
 		$('#masthead').show();
 	});
 
