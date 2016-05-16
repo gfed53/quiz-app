@@ -61,10 +61,11 @@ $(document).ready(function(){
 
 	//Refactor #7
 	$('.btn-answer').on('click', function(){
+		$('body').removeClass('body-nobg');
 		determineCorrect();
-		// $('body').removeClass('body-nobg');
 		$('.game-question').hide();
 		$('#masthead').hide();
+		$('body').addClass('text-withbg');
 		$('footer').addClass('footer-withbg');
 		clearRoundData();		
 	});
@@ -72,7 +73,8 @@ $(document).ready(function(){
 	$('.btn-question').on('click', function(){
 		$('.game-answer').hide();
 		// $('body').addClass('body-nobg');
-		$('body').css({'background-color': '#22313F', 'background-image': 'none' });
+		$('body').css({'background-color': '#ECECEC', 'background-image': 'none' });
+		$('body').removeClass('text-withbg');
 		$('footer').removeClass('footer-withbg');
 		$('#masthead').show();
 	});
