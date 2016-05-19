@@ -7,7 +7,7 @@ body {
 
 .body-nobg {
 	background-color: #ECECEC;
-	background-image: none;
+	background: none;
 }
 
 section, footer {
@@ -107,8 +107,11 @@ footer {
 	background-color: rgba(51, 51, 51, 0.68);
 }
 
-#score-footer {
+#score-footer h3 {
+	margin: 1em auto;
 	border-radius: 1.5em;
+	padding: 0.3em;
+	max-width: 10em;
 }
 
 #mast-footer {

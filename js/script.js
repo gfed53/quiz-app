@@ -59,23 +59,24 @@ $(document).ready(function(){
 		$(this).button('toggle');
 	});
 
-	//Refactor #7
+	$('.btn-default').on('click', function() {
+		window.scrollTo(0,0);
+	});
+
 	$('.btn-answer').on('click', function(){
-		$('body').removeClass('body-nobg');
 		determineCorrect();
 		$('.game-question').hide();
 		$('#masthead').hide();
 		$('body').addClass('text-withbg');
-		$('footer').addClass('footer-withbg');
+		$('footer, #score-footer h3').addClass('footer-withbg');
 		clearRoundData();		
 	});
 
 	$('.btn-question').on('click', function(){
 		$('.game-answer').hide();
-		// $('body').addClass('body-nobg');
 		$('body').css({'background-color': '#ECECEC', 'background-image': 'none' });
 		$('body').removeClass('text-withbg');
-		$('footer').removeClass('footer-withbg');
+		$('footer, #score-footer h3').removeClass('footer-withbg');
 		$('#masthead').show();
 	});
 

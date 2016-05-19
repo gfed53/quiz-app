@@ -1,0 +1,5 @@
+Quiz on Modern Culture is a quiz-app that tests your knowledge of pop-culture (maybe a bit niche for pop-culture. It's the most "pop" you're gonna get from me..).
+
+Developing this app strengthened my knowledge of object oriented programming in Javascript, as well as jQuery. The core functionality of this project revolves around having an array of question objects, created with the same constructer (title, answers, correct answer, background image and blurb keys) and the cycling-through of each of these items throughout the quiz.
+
+Upon further studies, specifically learning about AngularJS, I realize how much easier it can be to create this very app with a more powerful framework. My aim for the future would be to use Angular to have a single "question" template, and use controllers/services to change the scope for each question as the user progresses through the quiz, still utilizing the questions array. 
